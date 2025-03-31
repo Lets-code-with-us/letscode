@@ -1,0 +1,29 @@
+{
+  "name": "@repo/prisma-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/dist/index.js",
+  "exports": {
+    "./*": "./src/*.ts",
+    "./schema": "./prisma/*.prisma"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bash setup.sh",
+    "db:migrate": "npx prisma migrate dev --name init",
+    "db:studio": "npx prisma studio",
+    "db:generate": "npx prisma generate",
+    "db:pull": "npx prisma db pull"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "prisma": "^6.5.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

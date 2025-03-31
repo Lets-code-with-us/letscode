@@ -1,0 +1,22 @@
+# Use a base Node.js image
+FROM node:18-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package.json and install dependencies
+COPY package.json /app
+RUN npm run install
+
+# Copy all apps
+COPY apps ./apps
+
+# Build all Next.js apps
+RUN npm run build
+
+# Expose multiple ports
+EXPOSE 3001 3002 3003 3004
+
+# Start all apps using pm2 (process manager)
+RUN npm install -g pm2
+CMD ["pm2-runtime", "start", "ecosystem.config.js"]

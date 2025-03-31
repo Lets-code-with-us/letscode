@@ -1,0 +1,24 @@
+{
+  "name": "@repo/database-config",
+  "version": "1.0.0",
+  "description": "Database config mongoose connection",
+  "main": "index.js",
+  "exports": {
+    "./database": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc -b"
+  },
+  "dependencies": {
+    "mongoose": "~8.12.2"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@repo/schema-config",
+  "version": "1.0.0",
+  "description": "mongoose schema",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./*": "./src/models/*.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc -b",
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "mongoose": "~8.12.2"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
